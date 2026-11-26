@@ -37,3 +37,15 @@ Esta versión es un starter funcional de frontend. No incluye todavía estadíst
 
 ## Próximas fases
 Backend y perfiles, integración de fuentes de Brawl Stars, pipeline de esports/High Tier, catálogo validado de brawlers y motor de draft con counters, sinergias, mapa, modo y nivel.
+
+## Sincronización de cuenta por tag
+
+La sección **My Collection** permite introducir el tag y consultar el perfil y la lista de brawlers mediante una función serverless. El token nunca se envía al navegador.
+
+### Configurar en Vercel
+1. En el proyecto de Vercel, establece **Root Directory** como `draftmaster-bs` si el repositorio conserva la carpeta contenedora.
+2. En **Settings → Environment Variables**, añade `BRAWL_STARS_API_TOKEN` con el token creado en el portal oficial de desarrolladores de Supercell.
+3. Autoriza en el portal la IP de salida que corresponda al despliegue. La API oficial puede rechazar la petición si la IP no coincide con la permitida.
+4. Vuelve a desplegar el proyecto.
+
+El endpoint `/api/player?tag=...` consulta el perfil oficial. Si no existe el token, la web mostrará un aviso de configuración en vez de simular una sincronización. La colección importada se guarda en el navegador del usuario.
