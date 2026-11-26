@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://api.brawlstars.com/v1/players/%23${encodeURIComponent(tag)}`,
+      `https://bsproxy.royaleapi.dev/v1/players/%23${encodeURIComponent(tag)}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     }
     if (response.status === 403) {
       return res.status(502).json({
-        error: 'Supercell rechazó la solicitud. Revisa el token y la IP autorizada en el portal de desarrolladores.'
+        error: 'El proxy de RoyaleAPI o Supercell rechazó la solicitud. Comprueba que el token sea válido y que hayas autorizado la IP 45.79.218.79 al crear la clave.'
       });
     }
     if (!response.ok) {
