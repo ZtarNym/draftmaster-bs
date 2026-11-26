@@ -35,8 +35,12 @@ export const brawlerDossiers = {
     classificationStatus:"provisional",
     classificationRationale:"Su flujo de fuego sostenido y el aceite incendiable le permiten disputar espacio durante tiempo prolongado. La etiqueta describe su patrón de presión, no una recomendación universal.",
     winRateMasters:48.8,
+    mastersGames:162747,
+    pickRateMasters:26.0,
+    banRateMasters:35.9,
+    currentRank:"66 / 108",
     comparison:"53.5% antes del mantenimiento del 11 de noviembre; 48.8% después, según la ventana publicada por DraftMeta.",
-    sampleNote:"DraftMeta compara Masters+ Ranked del 12–25 nov. con 4–10 nov.; la métrica es contexto agregado, no matchup individual.",
+    sampleNote:"DraftMeta compara Masters+ Ranked desde el parche del 11 nov.; la ficha de Amber registra 162,747 partidas. Los datos agregados no demuestran causalidad ni matchup individual.",
     balanceChanges:[
       "Ataque principal: 2,100 → 1,800 de daño.",
       "Carga de Súper obtenida con su propio Súper: 53 → 40.",
